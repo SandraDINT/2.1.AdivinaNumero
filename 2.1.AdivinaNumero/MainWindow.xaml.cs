@@ -25,12 +25,16 @@ namespace _2._1.AdivinaNumero
         public MainWindow()
         {
             InitializeComponent();
-            numAleatorio = seed.Next(0, 50);
+            GenerarNumeroAleatorio();
+        }
+        private int GenerarNumeroAleatorio()
+        {
+            return numAleatorio = seed.Next(0, 100);
         }
 
-        private void comprobarButtonClick(object sender, RoutedEventArgs e)
+        private void ComprobarButtonClick(object sender, RoutedEventArgs e)
         {
-            int num = Int32.Parse(textBoxNumero.Text);
+            int num = Int32.Parse(numeroTextBox.Text);
             if (num == numAleatorio)
                 MessageBox.Show("¡Has acertado!");
             else if(num < numAleatorio)
@@ -39,10 +43,10 @@ namespace _2._1.AdivinaNumero
                 MessageBox.Show("El número es más pequeño");
         }
 
-        private void reiniciarButtonClick(object sender, RoutedEventArgs e)
+        private void ReiniciarButtonClick(object sender, RoutedEventArgs e)
         {
-            textBoxNumero.Text = "";
-            numAleatorio = seed.Next(0, 50);
+            numeroTextBox.Clear(); // o string.empty
+            numAleatorio = GenerarNumeroAleatorio();
         }
     }
 }

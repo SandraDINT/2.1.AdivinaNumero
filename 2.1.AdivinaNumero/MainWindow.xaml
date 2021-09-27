@@ -5,33 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_2._1.AdivinaNumero"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="AdivinaNumero"
+        Height="170"
+        Width="450"
+        Icon="Assets/128.ico">
     <Grid>
+        
         <TextBlock HorizontalAlignment="Left"
-                   Margin="97,203,0,0"
+                   Margin="29,40,0,0"
                    TextWrapping="Wrap"
                    Text="¿Qué número he pensado?"
-                   VerticalAlignment="Top" />
+                   VerticalAlignment="Top"
+                   Height="18" />
         <TextBox HorizontalAlignment="Left"
-                 x:Name="textBoxNumero"
-                 Height="23"
-                 Margin="266,203,0,0"
+                 x:Name="numeroTextBox"
+                 Height="18"
+                 Margin="211,40,0,0"
                  TextWrapping="Wrap"
                  VerticalAlignment="Top"
-                 Width="120" />
+                 Width="113" />
         <Button Content="Comprobar"
                 x:Name="comprobarButton"
                 HorizontalAlignment="Left"
-                Margin="97,250,0,0"
+                Margin="125,83,0,0"
                 VerticalAlignment="Top"
-                Width="75" 
-                Click="comprobarButtonClick"/>
+                Width="75"
+                Click="ComprobarButtonClick"
+                Height="23" 
+                IsDefault="True"/>
         <Button Content="Reiniciar"
                 x:Name="reiniciarButton"
-                Click="reiniciarButtonClick"
+                Click="ReiniciarButtonClick"
                 HorizontalAlignment="Left"
-                Margin="266,250,0,0"
+                Margin="328,83,0,0"
                 VerticalAlignment="Top"
-                Width="75" />
+                Width="75"
+                Height="23"
+                IsCancel="True"/>
     </Grid>
 </Window>
